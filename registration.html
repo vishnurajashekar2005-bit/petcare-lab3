@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetCare Registration</title>
+<link rel="stylesheet" href="petcare.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1 class="logo">PetCare</h1>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="registration.html">Register</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section class="section">
+
+<h2 class="section-title">Pet Adoption Registration</h2>
+
+<div class="contact-container">
+
+<form class="contact-form" id="registerForm">
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<input type="date" id="dob">
+
+<input type="tel" id="phone" placeholder="Phone Number">
+
+<select id="pet">
+
+<option value="">Select Pet</option>
+<option>Dog</option>
+<option>Cat</option>
+<option>Rabbit</option>
+<option>Bird</option>
+
+</select>
+
+<input type="file" id="photo">
+
+<textarea id="address" rows="4" placeholder="Address"></textarea>
+
+<button type="button" onclick="registerUser()">Register</button>
+
+</form>
+
+</div>
+
+<h2 class="section-title">Registration Details</h2>
+
+<div id="result"></div>
+
+</section>
+
+<footer>
+<p>© 2026 PetCare. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

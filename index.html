@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetCare</title>
+<link rel="stylesheet" href="petcare.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1 class="logo">PetCare</h1>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#pets">Pets</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="registration.html">Register</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Welcome to PetCare</h1>
+<p>Find loving pets for your family.</p>
+<a href="#pets" class="btn">View Pets</a>
+<button class="btn" onclick="openModal()">Adopt Now</button>
+</div>
+</section>
+
+<section class="section" id="pets">
+<h2 class="section-title">Available Pets</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+<h3>Golden Retriever</h3>
+<p>Friendly and playful dog.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+<h3>Persian Cat</h3>
+<p>Soft and calm companion.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b">
+<h3>Beagle</h3>
+<p>Energetic and lovable pet.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="services">
+<h2 class="section-title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Pet Adoption</h3>
+<p>Adopt healthy and happy pets.</p>
+</div>
+
+<div class="card">
+<h3>Vaccination</h3>
+<p>Regular health checkups for pets.</p>
+</div>
+
+<div class="card">
+<h3>Pet Grooming</h3>
+<p>Professional grooming services.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="gallery">
+<h2 class="section-title">Pet Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b">
+<img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e">
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-container">
+
+<div>
+<h3>PetCare Center</h3>
+<p>Bangalore, Karnataka</p>
+<p>+91 9876543210</p>
+<p>petcare@gmail.com</p>
+</div>
+
+<form class="contact-form">
+<input type="text" placeholder="Enter Name">
+<input type="email" placeholder="Enter Email">
+<textarea rows="5" placeholder="Enter Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">&times;</span>
+<h2>Pet Adoption</h2>
+<p>Thank you for choosing pet adoption.</p>
+<button onclick="getLocation()">Get Location</button>
+<p id="location"></p>
+</div>
+</div>
+
+<footer>
+<p>© 2026 PetCare. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+function openModal(){
+document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+function getLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(showPosition);
+
+}else{
+
+document.getElementById("location").innerHTML="Location not supported";
+
+}
+
+}
+
+function showPosition(position){
+
+document.getElementById("location").innerHTML=
+"Latitude: "+position.coords.latitude+
+"<br>Longitude: "+position.coords.longitude;
+
+}
+
+</script>
+
+</body>
+</html>
