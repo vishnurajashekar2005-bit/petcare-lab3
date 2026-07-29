@@ -29,17 +29,34 @@
 
 <form class="contact-form" id="registerForm">
 
-<input type="text" id="name" placeholder="Full Name">
+<input type="text"
+id="name"
+placeholder="Full Name"
+required>
 
-<input type="email" id="email" placeholder="Email">
+<input type="email"
+id="email"
+placeholder="Email"
+required>
 
-<input type="password" id="password" placeholder="Password">
+<input type="password"
+id="password"
+placeholder="Password"
+minlength="6"
+required>
 
-<input type="date" id="dob">
+<input type="date"
+id="dob"
+required>
 
-<input type="tel" id="phone" placeholder="Phone Number">
+<input type="tel"
+id="phone"
+placeholder="Phone Number"
+pattern="[0-9]{10}"
+maxlength="10"
+required>
 
-<select id="pet">
+<select id="pet" required>
 
 <option value="">Select Pet</option>
 <option>Dog</option>
@@ -49,9 +66,16 @@
 
 </select>
 
-<input type="file" id="photo">
+<input type="file"
+id="photo"
+accept=".jpg,.jpeg,.png"
+required>
 
-<textarea id="address" rows="4" placeholder="Address"></textarea>
+<textarea
+id="address"
+rows="4"
+placeholder="Address"
+required></textarea>
 
 <button type="button" onclick="registerUser()">Register</button>
 
